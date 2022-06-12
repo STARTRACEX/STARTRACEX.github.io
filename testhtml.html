@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"><!--声明编码格式-->
+    <meta name="author" content="imafez"><!--meta定义了文档元数据描述-->
+    <meta name="keywords" content="html,前端">
+    <!--<base href="https://www.runoob.com/images/" target="_blank">base有两个属性,herf设置基准URL,target设置新窗口打开方式-->
+    <title>HTML</title>
+    <style>
+    *{
+        margin: 0;/*可用*全选元素*/
+    }
+        
+    #nooon {text-align: center;}/*可用#设置id元素*/
+
+    p.uppercase {text-transform:uppercase;}/*使用.设置class元素*/
+    p.lowercase {text-transform:lowercase;}/*设置同时满足标签(p)和class(lowercase)的元素*/
+    p.capitalize {text-transform:capitalize;}/*可用元素间添加,选取多个元素*/
+    /*元素1 元素2:元素1中的2*/
+    /*元素1>元素2>元素3:元素1中的2中的3*/
+    /*元素1+元素2:邻进元素1的2*/
+    /*:设置伪类标签*/
+    /*::设置伪元素标签*/
+    .box {
+        /*内容区*/
+        width: 300px;
+        height: 300px;
+        background-color: chocolate;
+        /*边框缩写与非缩写*/
+        border:1px soild aliceblue;
+        /*border-color: aliceblue;*/
+        /*border-width:1px 1px;值的顺序设置上 右 左 下或上 左右 下 或上下 左右或全部*/
+        /*也可用border-top/left/right/bottom-width*/
+        /*此也可用于其他边框用法入颜色*/
+        /*border-style: solid;实线*/
+        /*内边框*/
+        padding: 0px;
+        /*外边框*/
+        margin: 0px;
+        box-sizing: content-box;/*content-box由内容和决定大小,border-box由边框决定大小*/
+        outline:0;/*外轮廓,不影响布局*/
+        box-shadow: -2px 0 0 rgb(246, 238, 253);/*阴影,不影响布局,水平偏移,竖直偏移,模糊半径,颜色*/
+        border-radius: 0%;/*设置圆角*/
+        float: none;/*float不为none将从文档流中脱离*/
+        /*启动BFC:使多个块一起脱离文档流*/
+        /*clear可以清除float造成的影响*/
+        clear: both;
+        position: static;
+        /* static关闭定位,
+        relative开启相对定位,会提高层级,需设置偏移量:top,left,righ,bottom,
+        sticky开启粘滞定位,到达定位点将停止,低兼容性
+        absolute开启绝对定位,会成为块元素并脱离文档流,提升层级,需设置偏移量
+        fixed开启固定定位,根据浏览器视口定位,需设置偏移量
+         */
+
+    }
+    a{
+        display: inline-block;/*block转换为块元素,inline转换为行元素,inline-block转换为行内块元素,tabel转换为表格,none不在页面中显示*/
+        visibility:visible;/*visible默认显示,hidden隐藏空出位置*/
+    }
+    a:hover{color: aqua;}/*鼠标悬浮状态*/
+    a:active{color: blueviolet;}/*点击中*/
+    a:link{color: aquamarine;}/*正常链接*/
+    a:visited{color: aqua;}/*visited只能修改已访问过的链接颜色*/
+    </style>
+    <link rel="stylesheet" href="./css.css"><!--可将<style>标签内的内容在css文件中调用-->
+</head>
+
+<body>
+    通过浏览器中启动"检查"或选择"查看源代码",或在文本编辑器中打开此文档来查看源代码与注释内容.
+    <br>
+    body 定义  主体<!--空格或其他特殊符号在html文本中无效,需要用"&nbsp;"等代替&gt;">",&lt;"<",在p中无需这样-->
+    <hgroup><!--标题组-->
+        <h3 style="text-align:center;">3号字体标题标题且align为居中</h3>   
+    </hgroup>
+    <p><font size="3">3号字体大小文本</font></p>
+    <p>段 落</p>
+    <hr><!--直线-->
+    <br>
+    <pre><p style="color:rgb(24, 24, 24);font-size:18px;">使用br元素换行,br定义一个水平线,它们均为为一个 空 元素.
+使用pre可显现段落中空格和换行</pre>
+    <div><!--div分隔区和组合块级元素--></div>
+    <p title="不同的文本" class="text"; style="background-color:rgb(239, 234, 243)"><!--设置title在鼠标悬浮时显示文本,p背景在rgb-->
+        
+        <abbr title="HyperText Markup Language">html</abbr> 格式输出<!--abbr定义了缩写-->
+        <br>
+        <b>	定义粗体文本</b>
+        <br>
+        <em>	定义着重文字</em>
+        <br>
+        <i>	定义斜体字</i>
+        <br>
+        <small>	定义小号字</small>
+        <br>
+        <strong>	定义加重语气</strong>
+        <br>
+        定义<sub>	下标</sub>字
+        <br>
+        定义<sup>	上标</sup>字
+        <br>
+        <ins>	定义插入字</ins>
+        <br>
+        <del>	定义删除字 </del>
+        <br>
+        <blockquote>定义引用</blockquote>
+        <br>
+        <q>定义短引用并添加引号</q>
+    </p>
+    <p id="nooon">nooon</p>
+    <p class="uppercase">This is some text.</p>
+    <p class="lowercase">This is some text.</p>
+    <p class="capitalize">This is some text.</p>
+
+    <div style="background-color:rgb(239, 234, 243)">列表
+    列表中只能存在列表内容
+    <ol type="i" start="1"><!--type=1,a,A,i,I定义多种排序序号,start定义开始序号-->
+        <li>有序列表</li>
+        <li>有序列表</li>
+        <li>有序列表</li>
+
+    </ol>
+    <ul type="disc"><!--type=disc,circle,square定义列表符号-->
+        <li>无序列表</li>
+        <li>无序列表</li>
+    </ul>
+    <dl><!--创建自定义列表-->
+        <dt>顶级列表</dt>
+        <dd>二级列表
+            <dl><!--嵌套在二级列表中-->
+                <dt>二级中顶级列表</dt>
+                <dd>二级中二级列表</dd>
+            </dl>
+        </dd>
+    </dl>
+    </div>
+    <img src="./jntm.png" alt="描述" width="100px" height="100px"><!--插入图片,src为地址,alt为描述-->
+    <audio src="./Fallin' Up.mp3" controls ></audio><!--插入音频,controls设置允许用户控制,autoplay设置自动播放,loop设置循环播放-->
+    <video src="./gg.mp4" width="200px" height="220px" controls><!--插入视频-->
+    </video>
+    <iframe src="https://bing.com/" width="99%" height="400px" frameborder="0"></iframe><!--内联框架,将其他网址嵌套在此-->
+
+    <hr>
+    <div >
+        
+        <div class="box"></div>
+        <
+
+
+    </div>
+    
+    <a href="#">回到顶部</a><!--herf为#回到顶部,#id名则前往id为id名的部分-->
+
+    <a href="https://www.runoob.com/html/html-tutorial.html">连接到runoob的htmk教程</a><!--a定义了超链接,链接可以是其他,媒体或是HTML元素-->
+
+    <address><!--没什么用的地址-->
+        Written by <a href="https://space.bilibili.com/372446173">IMAFEZ</a>
+        <br> 
+
+    </address>
+    
+</body>
+</html>

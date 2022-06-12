@@ -1,0 +1,351 @@
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgb(30, 34, 39);
+    font-family: 'Noto Sans SC', sans-serif;
+    color: rgb(240, 240, 240);
+}
+
+nav {
+    background-color: rgb(30, 29, 29);
+    width: 100%;
+    border-top: 1.25px solid rgb(169, 56, 0);
+    border-bottom: 1px solid rgb(111, 111, 111);
+    height: 46px;
+    line-height: 46px;
+    z-index: 990;
+}
+
+nav .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    z-index: 997;
+
+}
+
+nav h1 {
+    font-size: 145%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    nav h1 a,
+    nav h1 span {
+        display: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+}
+
+a[onclick] {
+    cursor: pointer;
+}
+
+.main {
+    position: relative;
+    width: 95%;
+    margin: 0 auto 0;
+
+}
+
+main {
+    height: calc(100vh - 48.25px);
+    position: relative;
+    overflow: hidden;
+}
+
+footer {
+    margin-top: 1px;
+    background-color: rgb(30, 29, 29);
+    width: 100%;
+    border-top: 1px solid rgb(111, 111, 111);
+}
+
+/* 以上为全局样式 */
+/* 以下顶端导航样式 */
+
+nav .right {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.personal,
+.setting {
+    margin-left: 6px;
+    margin-top: 5.5px;
+    width: 32px;
+    position: relative;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    position: absolute;
+    top: 38px;
+    background-color: rgb(28, 28, 31);
+    z-index: 999;
+
+}
+
+.setting .option {
+
+    right: -35.5%;
+    width: 5.5em;
+}
+
+.personal .option {
+
+    right: -32.4%;
+    width: 4em;
+}
+
+.setting:hover>.option,
+.personal:hover>.option {
+    visibility: visible;
+
+}
+
+.option a {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.225s;
+}
+
+.option a:hover {
+    background-color: rgba(40, 160, 150, .56);
+    font-size: 102.5%;
+
+}
+
+
+
+/* 以下为底部与回到顶部样式 */
+#totop {
+    position: fixed;
+    right: 2.5%;
+    bottom: 10%;
+}
+
+#totop a:hover>svg {
+
+    transform: translateY(-3.3px);
+    transition: 0.328s ease-out;
+
+}
+
+
+
+#copyright a {
+    cursor: crosshair;
+}
+
+ul.i {
+    position: absolute;
+    bottom: 121%;
+    visibility: hidden;
+}
+
+ul.i li a {
+    display: block;
+    white-space: nowrap;
+    line-height: 1.5em;
+    padding: 4px;
+    font-size: 87.8%;
+    background-color: rgb(28, 28, 31);
+
+}
+
+footer div.about,
+footer div.about li.footertab,
+#copyright {
+    text-align: center;
+    margin: 4.2px 3.8px 5px;
+    font-size: 107%;
+    position: relative;
+}
+
+footer div.about ul.o {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+    footer div.about ul.o {
+        flex-direction: column;
+    }
+}
+
+footer a {
+    transition: color 500ms ease 17.1496ms;
+}
+
+footer .footertab a:hover {
+    text-decoration: underline;
+    color: rgb(210, 210, 210);
+}
+
+footer ul.i a:hover {
+    text-decoration: none;
+    color: rgb(215, 215, 215);
+    background-color: rgb(45, 45, 50);
+    transition: background-color 0.293s ease-in-out;
+}
+
+li.footertab a {
+    padding: 2px 6px;
+}
+
+footer ul.o li:hover ul.i {
+    visibility: visible;
+}
+
+/* 以下主要为表单样式 */
+div.platform {
+    width: 80%;
+    max-width: 680px;
+    margin: 3% auto;
+    padding: 1.8%;
+    background-color: rgb(30, 35, 43);
+    border-radius: 18px;
+    box-shadow: #f4f4f40f 0px 0px 20px;
+}
+
+div.form {
+    margin: 1.2% auto 1%;
+}
+
+/* 表单名右对齐 */
+form#register_form label:not([for="read"]) {
+    display: inline-block;
+    width: 8em;
+    height: 2em;
+    text-align: right;
+}
+
+form#login_form label {
+    display: inline-block;
+    width: 5em;
+    height: 2em;
+    text-align: right;
+}
+
+/* 表单输入框 */
+input#username,
+input#password,
+input#e-mail,
+input#nickname,
+input#again {
+    margin-left: 1px;
+    height: 1.6em;
+    width: 200px;
+    color: #f4f4f4;
+    border: 0.8px solid rgb(45, 45, 45);
+    background-color: rgba(68, 68, 68, 0.205);
+}
+
+form input::-webkit-input-placeholder {
+    color: rgb(132, 132, 132);
+    font-size: 105%;
+}
+
+input#username:focus,
+input#password:focus,
+input#e-mail:focus,
+input#nickname:focus,
+input#again:focus {
+    transform: scale(1.035) translateX(2px) translateY(-3px);
+    outline: 1.2px solid #07c8ea;
+}
+
+/* 表单的位置 */
+form li,
+.platform h2 {
+    margin-bottom: 0.75em;
+    text-align: center;
+    min-height: 20px;
+}
+
+.form label {
+    color: rgb(224, 224, 224);
+}
+
+/* 协议,找回密码,切换登录注册 */
+.form a span {
+    color: rgb(175, 193, 255);
+}
+
+/* 提交按钮 */
+#Sumbit {
+    width: 6.3em;
+    height: 2.3em;
+    background-color: rgb(44, 194, 224);
+    border-width: 0;
+    font-size: 18px;
+    margin: 1%;
+    border-radius: 0.442em;
+    cursor: pointer;
+}
+#Sumbit:hover{
+    background-color: rgba(44, 194, 224, 0.85);
+    transform: scale(1.02);
+}
+/* 登录选项 */
+
+.loginoption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginoption a {
+    display: flex;
+    margin: 12px 16px 0 16px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: f;
+    border-radius: 15% 3%;
+    padding: 1%;
+}
+
+.loginoption a:hover {
+    background-color: rgba(2, 226, 251, 0.3);
+}
+
+@media screen and (max-width:600px) {
+
+    .loginoption {
+        flex-direction: column;
+    }
+
+    .loginoption a {
+        width: 6rem;
+        justify-content: flex-start;
+    }
+
+    .platform h2 {
+        margin-top: 28px;
+    }
+
+    .platform {
+        margin-top: 35px;
+    }
+}
