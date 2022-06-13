@@ -51,8 +51,11 @@
 }
 
 .playon a:hover {
-    color: rgb(161, 224, 220);
+    color: rgb(208, 231, 229);
     transform: scale(1.05);
+}
+.playon a:hover path{
+    fill: rgb(235, 255, 255);
 }
 
 .juxtaposition {

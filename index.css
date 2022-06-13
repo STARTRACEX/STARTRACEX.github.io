@@ -7,6 +7,8 @@ body {
     background-color: rgb(30, 34, 39);
     font-family: 'Noto Sans SC', sans-serif;
     color: rgb(240, 240, 240);
+    overflow-y: auto;
+        overflow-x: hidden;
 }
 
 nav {
@@ -68,12 +70,6 @@ main {
     overflow: hidden;
 }
 
-footer {
-    margin-top: 1px;
-    background-color: rgb(30, 29, 29);
-    width: 100%;
-    border-top: 1px solid rgb(111, 111, 111);
-}
 
 /* 以上为全局样式 */
 /* 以下顶端导航样式 */
@@ -155,7 +151,7 @@ nav .right {
 #copyright a {
     cursor: crosshair;
 }
-
+/* 
 ul.i {
     position: absolute;
     bottom: 121%;
@@ -216,6 +212,87 @@ li.footertab a {
 
 footer ul.o li:hover ul.i {
     visibility: visible;
+} */
+/* TODO */
+footer{
+    border-top: 1.2px solid rgb(111, 111, 111);
+    background-color: rgb(30, 29, 29);
+    padding: 12px 8.5% 18px 8.5%;
+    font-size: 120%;
+}
+footer div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+footer span{
+    display: inline-block;
+    color: #f4f4f4aa;
+    font-size: 1.2em;
+    border-bottom: #f4f4f4aa 1px solid;
+}
+
+footer ul.o{
+    display: flex;
+    margin: 5px;
+}
+footer li{
+    width: 8.5em;
+    margin: 8px 0;
+}
+footer li a{
+    display: inline-block;
+    padding-bottom: 1px;
+}
+footer svg{
+    margin: 3px;
+}
+footer svg:hover path{
+        fill: rgb(160, 160, 163);
+}
+footer li a:hover{
+    border-bottom: #f4f4f4aa 1px solid;
+    box-sizing: content-box;
+    padding-bottom: 0;
+    color: #f6fdff;
+}
+#footer-copyright a{
+    display: block;
+    cursor: crosshair;
+    padding: 4px;
+}
+.footerqr{
+    padding-top: 40px;
+    position: relative;
+}
+.footerqr img{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    right: 0;
+    bottom: 50px;
+    opacity: 0;
+    transition: 0.23s;
+}
+.footerqr:hover>img{
+    opacity: 1;
+    transform: scale(1.8) translateY(-30px);
+}
+
+
+
+
+
+
+@media screen and (max-width: 720px)
+{
+    footer div,ul.o{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
 }
 
 /* 以下主要为表单样式 */
