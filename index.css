@@ -230,7 +230,7 @@ footer span{
     display: inline-block;
     color: #f4f4f4aa;
     font-size: 1.2em;
-    border-bottom: #f4f4f4aa 1px solid;
+    border-bottom: #c7c7c745 1.5px solid;
 }
 
 footer ul.o{
@@ -270,8 +270,9 @@ footer li a:hover{
     position: absolute;
     height: 100px;
     width: 100px;
-    right: 0;
-    bottom: 50px;
+    border-radius: 0 8px;
+    right: -26px;
+    bottom: 58px;
     opacity: 0;
     transition: 0.23s;
 }
