@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PSE Warning</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="startrace">
+    <meta name="description" content="了解关于STARTRACE">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+    <style>
+        body {
+            background-color: rgb(30, 34, 39);
+            font-family: "Noto Sans SC", sans-serif;
+            color: rgb(221, 221, 221);
+            margin: 0 35px 15px 35px;
+        }
+        h1 {
+            text-align: center;
+        }
+        button{
+            border-radius: 10px;
+            margin: 3px;
+            height: 2em;
+            width: 5.2em;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="zh">
+        <h1>光敏性癫痫警告</h1>
+        <h2> 光敏性癫痫警告</h2>
+        <h3>极小部分人可能会在看到特定视觉图像（包括可能出现在视频游戏中的闪烁效果或图案）时出现癫痫症状。甚至没有癫痫史的人也可能具有一些可能会在玩视频游戏时导致“光敏性癫痫发作”的未确诊症状。</h3>
+        <h2>如果你出现任何症状，请立即停止玩游戏并咨询医生。</h2>
+        <h3>这类癫痫症可具有多种不同病状，包括头晕目眩、视力模糊、眼睛或面部抽搐、四肢抽搐、迷失方向感、精神错乱或短暂的意识丧失。癫痫发作也可能导致意识丧失或痉挛，进而可能导致患者因跌倒或撞击到旁边的物体而受伤</h3>
+        <h2>家长应留意或询问孩子是否有上述症状。儿童和青少年比成年人更有可能出现这些症状。</h2>
+        <h2>你可通过采取以下预防措施降低光敏性癫痫发作的风险：</h2>
+        <h3>在光线明亮的房间内玩游戏。</h3>
+        <h3>如果感到昏昏欲睡或疲劳，请勿玩游戏。</h3>
+        <h2>如果你或你的亲人有癫痫史，请在玩视频游戏前先咨询医生。</h2>
+    </div>
+    <div id="en">
+        <div id="zh" style="display: block;">
+            <h1>Warning of photosensitive epilepsy</h1>
+            <h2 > Warning of photosensitive epilepsy</h2>
+            <h3 >A very small percentage of people may develop
+                epilepsy symptoms when they see specific visual images, including flickering effects or patterns that may appear
+                in video games. Even people without a history of epilepsy may have some undiagnosed symptoms that can lead to
+                "photosensitive seizures" while playing video games.</h3>
+            <h2 >If you experience any symptoms, stop playing
+                the game immediately and consult a doctor.</h2>
+            <h3 >This type of epilepsy can have a variety of
+                different pathologies, including dizziness, blurred vision, eye or facial twitches, twitching of limbs,
+                disorientation, confusion, or transient loss of consciousness. Seizures can also cause loss of consciousness or
+                cramps, which in turn can lead to injury from falling or hitting an object next to them</h3>
+            <h2 >Parents should pay attention to or ask their child if they have any of the above symptoms. Children and adolescents are more likely than adults to have these symptoms.</h2>
+            <h2 >You can reduce your risk of photosensitive seizures by taking the following precautions:</h2>
+            <h3 >Play games in a brightly lit room.</h3>
+            <h3>If you feel drowsy or tired, do not play games.</h3>
+            <h2 >If you or a loved one has a history of epilepsy, consult a doctor before playing video games.</h2>
+        </div>
+    </div>
+    <button id="swichzh" type="button">中文</button>
+    <button id="swichen" type="button">English</button>
+    <script>
+        var lang = navigator.language;
+        lang = lang.substr(0, 2);
+        if (lang == "zh") {
+            document.getElementById("zh").style.display = "block";
+            document.getElementById("en").style.display = "none";
+        } else {
+            document.getElementById("zh").style.display = "none";
+            document.getElementById("en").style.display = "block";
+        }
+        document.getElementById("swichzh").onclick = function () {
+            document.getElementById("zh").style.display = "block";
+            document.getElementById("en").style.display = "none";
+        };
+        document.getElementById("swichen").onclick = function () {
+            document.getElementById("zh").style.display = "none";
+            document.getElementById("en").style.display = "block";
+        };
+    </script>
+</body>
+
+</html>

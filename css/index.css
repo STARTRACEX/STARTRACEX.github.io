@@ -7,6 +7,8 @@ body {
     background-color: rgb(30, 34, 39);
     font-family: 'Noto Sans SC', sans-serif;
     color: rgb(240, 240, 240);
+    width: 100vw;
+    min-height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -88,7 +90,7 @@ nav .right {
 }
 
 .option {
-    
+
     visibility: hidden;
     position: absolute;
     top: 38px;
@@ -97,13 +99,14 @@ nav .right {
 }
 
 .setting .option {
-    right: -35.5%;
+    right: -15.5%;
     width: 5.35em;
 }
+
 .personal .option {
-    right: -12.4%;
+    right: -28.4%;
     width: 4.8em;
-} 
+}
 
 .setting:hover>.option,
 .personal:hover>.option {
@@ -123,6 +126,7 @@ nav .right {
     background-color: rgba(40, 160, 150, .56);
     font-size: 1.02em;
 }
+
 /* 以下为底部与回到顶部样式 */
 #totop {
     position: fixed;
@@ -136,6 +140,7 @@ nav .right {
     transition: 0.328s ease-out;
 
 }
+
 #copyright a {
     cursor: crosshair;
 }
@@ -154,7 +159,7 @@ footer div {
     margin: 10px;
 }
 
-footer span {
+footer span:not(.colorfulspan) {
     display: inline-block;
     color: #f4f4f4aa;
     font-size: 1.2em;
@@ -224,15 +229,16 @@ footer li a:hover {
         align-items: center;
         text-align: center;
     }
-
 }
 
 /* 以下主要为表单样式 */
 div.platform {
-    width: 80vw;
-    max-width: 640px;
-    margin: 7% auto;
-    padding: 1.8%;
+    width: clamp(300px, 80vw, 640px);
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-top:clamp(38px,12%,128px);
     background-color: rgb(30, 35, 43);
     border-radius: 18px;
     box-shadow: #f4f4f40f 0px 0px 20px;
@@ -244,14 +250,12 @@ input#password,
 input#e-mail,
 input#again {
     border-radius: 4.4px;
-    margin-left: 1px;
     height: 1.6em;
     width: 200px;
     color: #f4f4f4;
     border: 0.8px solid rgb(45, 45, 45);
     background-color: rgba(68, 68, 68, 0.205);
 }
-
 form input::-webkit-input-placeholder {
     color: rgb(132, 132, 132);
     font-size: 102%;
@@ -265,14 +269,17 @@ input#again:focus {
     outline: 1.2px solid #07c8ea90;
 }
 
-/* 表单的位置 */
+form label {
+    margin-right: 4.8px;
+}
 
 form li {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 11.5px;
+    margin-top: 13.5px;
+    margin-bottom: 8px;
 }
 
 form {
@@ -282,18 +289,12 @@ form {
     align-items: center;
 }
 
-form>* {
-    margin: 0 0 12.4px 0;
-}
-
-.platform h2 {
-    margin-bottom: 0.75em;
-    text-align: center;
-}
-
 /* 协议,找回密码,切换登录注册 */
-form em {
+form .colorfulspan {
     color: rgb(175, 193, 255);
+    display: inline-block;
+    padding: 6px;
+
 }
 
 /* 提交按钮 */
@@ -305,6 +306,7 @@ form em {
     font-size: 18px;
     border-radius: 0.442em;
     cursor: pointer;
+    margin: 12px 0 18px 0;
 }
 
 #Sumbit:hover {
@@ -321,8 +323,9 @@ form em {
 }
 
 .loginoption a {
+    FONT-WEIGHT: 100;
     display: flex;
-    margin: 12px 16px 0 16px;
+    margin: 12px 16px;
     align-items: center;
     flex-direction: row;
     justify-content: f;
@@ -345,4 +348,16 @@ form em {
         justify-content: flex-start;
     }
 
+    form li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form label {
+        margin-bottom: 6px;
+    }
+
+    #Sumbit {
+        width: 10.8rem;
+    }
 }
