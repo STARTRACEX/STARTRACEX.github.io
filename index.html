@@ -7,19 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="startrace">
     <meta name="description" content="了解关于STARTRACE">
-    <link rel="shortcut icon" href="./Home.ico">
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./details.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="./img/Home.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/details.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 </head>
 
 <body>
-    <!-- 
     <nav id="nav">
         <div class="main">
             <div class="left">
-                <h1><a class=".hidden" href="#">STARTRACE</a> <span>|</span> Home</h1>
+                <h1><a class=".hidden" href="">STARTRACE</a> <span>|</span> <em i18n="home">Home</em></h1>
             </div>
             <div class="right">
                 <div class="personal">
@@ -34,15 +33,15 @@
                                 fill="#f7f7f7" p-id="1704"></path>
                         </svg>
                     </a>
-                    <div class="option">
-                        <a href="./login.html">个人</a>
-                        <a href="#">注销</a>
+                    <div class="option" id="personalOption">
+                        <a href="./login.html" i18n="me">个人</a>
+                        <a href="" i18n="order">订单</a>
+                        <a href="" i18n="friends">好友</a>
                     </div>
                 </div>
                 <div class="setting">
                     <a href="#">
-                        <?xml version="1.0" encoding="UTF-8"?><svg width="32" height="32" viewBox="0 0 48 48"
-                            fill="none">
+                        <?xml version="1.0" encoding="UTF-8"?><svg width="32" height="32" viewBox="0 0 48 48" fill="none">
                             <rect width="48" height="48" fill="white" fill-opacity="0.01" />
                             <path
                                 d="M18.2838 43.1712C14.9327 42.1735 11.9498 40.3212 9.58787 37.8669C10.469 36.8226 11 35.4733 11 34C11 30.6863 8.31371 28 5 28C4.79955 28 4.60139 28.0098 4.40599 28.029C4.13979 26.7276 4 25.3801 4 24C4 21.9094 4.32077 19.8937 4.91579 17.9994C4.94381 17.9998 4.97188 18 5 18C8.31371 18 11 15.3137 11 12C11 11.0487 10.7786 10.1491 10.3846 9.34999C12.6975 7.19937 15.5205 5.5899 18.6521 4.72302C19.6444 6.66807 21.6667 8.00001 24 8.00001C26.3333 8.00001 28.3556 6.66807 29.3479 4.72302C32.4795 5.5899 35.3025 7.19937 37.6154 9.34999C37.2214 10.1491 37 11.0487 37 12C37 15.3137 39.6863 18 43 18C43.0281 18 43.0562 17.9998 43.0842 17.9994C43.6792 19.8937 44 21.9094 44 24C44 25.3801 43.8602 26.7276 43.594 28.029C43.3986 28.0098 43.2005 28 43 28C39.6863 28 37 30.6863 37 34C37 35.4733 37.531 36.8226 38.4121 37.8669C36.0502 40.3212 33.0673 42.1735 29.7162 43.1712C28.9428 40.7518 26.676 39 24 39C21.324 39 19.0572 40.7518 18.2838 43.1712Z"
@@ -53,22 +52,20 @@
                         </svg>
                     </a>
                     <div class="option">
-                        <a href="#">简体中文</a>
-                        <a href="#">English</a>
-                        <a href="#">русский</a>
+                        <a id="lang_zh" href="">简体中文</a>
+                        <a id="lang_en" href="">English</a>
+                        <a id="lang_ru" href="">русский</a>
                     </div>
-
                 </div>
             </div>
         </div>
-    </nav> -->
-    <script type="text/javascript" src="nav.js"></script>
-
+    </nav>
+    <!-- <script type="text/javascript" src="nav.js"></script> -->
     <main id="indexmain">
         <div class="sec">
             <div class="title">
                 <h1 id="name"> Flash Crash</h1>
-                <h1 id="name0">闪速崩溃</h1>
+                <h1 id="name0" i18n="locatetitle">&nbsp;</h1>
             </div>
             <div class="playon">
                 <a class="playon" onclick="ud()">
@@ -77,140 +74,81 @@
                         <path
                             d="M511.104 0C242.261333 0 21.802667 207.36 0.938667 470.912l274.432 113.408a144.512 144.512 0 0 1 81.578666-25.173333c2.688 0 5.333333 0.170667 8.021334 0.256l122.069333-176.725334V380.16a193.194667 193.194667 0 0 1 193.024-193.024c106.410667 0 193.024 86.656 193.024 193.152s-86.613333 193.066667-193.024 193.066667h-4.48l-173.909333 124.202666c0 2.218667 0.170667 4.48 0.170666 6.784a144.725333 144.725333 0 0 1-144.64 144.896 145.578667 145.578667 0 0 1-142.122666-116.352L18.602667 651.52C79.445333 866.432 276.736 1024 511.104 1024c282.752 0 511.957333-229.248 511.957333-512S793.813333 0 511.104 0zM321.706667 776.96l-62.848-26.026667c11.178667 23.168 30.464 42.624 56.064 53.333334a108.842667 108.842667 0 0 0 142.378666-141.824 108.672 108.672 0 0 0-138.88-60.288l64.981334 26.88a80.128 80.128 0 0 1-61.653334 147.925333H321.706667z m487.04-396.928a128.810667 128.810667 0 0 0-128.64-128.64 128.64 128.64 0 1 0 128.64 128.64z m-224.981334-0.213333a96.597333 96.597333 0 1 1 193.322667 0 96.725333 96.725333 0 0 1-96.682667 96.64 96.597333 96.597333 0 0 1-96.64-96.64z"
                             fill="#f4f4f4" p-id="9874"></path>
-                    </svg>
-                    &nbsp;在STEAM上游玩</a>
+                    </svg><span i18n="playonsteam" style="margin-left:5px;" >在STEAM上游玩</span></a>
                 <a class="playon" onclick="ud()"><svg fill="#f4f4f4" width="42" height="42" viewBox="0 0 815 815">
                         <path
                             d="M375.46 252.45v-75.97c0-12.08-5.58-17.69-17.18-17.69h-18.9v111.36h18.9c11.6 0 17.18-5.61 17.18-17.7zm-60.68 270.86l-10.32 25.99h20.51zM685.37 13.5H129.63c-45.04 0-61.67 16.62-61.67 61.69v543.78c0 5.1.21 9.84.66 14.23 1.03 9.84 1.22 19.37 10.37 30.22.89 1.06 10.23 8.01 10.23 8.01 5.02 2.46 8.46 4.28 14.12 6.56l273.65 114.65c14.21 6.51 20.15 9.05 30.46 8.85h0 .04.04 0c10.32.2 16.26-2.33 30.47-8.85l273.65-114.65c5.67-2.28 9.1-4.09 14.12-6.56 0 0 9.34-6.95 10.23-8.01 9.15-10.85 9.34-20.39 10.37-30.22.45-4.39.66-9.13.66-14.23V75.19c.01-45.07-16.62-61.69-61.66-61.69zM442.15 118.22h45.97v302.13h-45.97V118.22zm3.11 375.7h26.77v91.42h-25.21v-52.5l-23.38 35.79h-.52l-23.25-35.52v52.24h-24.82v-91.42h26.77l21.81 35.39 21.83-35.4zm-151.84-375.7h72.16c37.37 0 55.84 18.56 55.84 56.11v80.28c0 37.55-18.47 56.1-55.84 56.1h-26.2v109.63h-45.96V118.22zm-125.27 0h102.23v41.86H214.1v85.46h54.12v41.86H214.1v91.08h57.13v41.86H168.15V118.22zm87.86 454.85c-9.67 7.97-23.12 14.11-39.7 14.11-28.47 0-49.76-19.59-49.76-47.28v-.26c0-26.64 20.9-47.54 49.24-47.54 16.06 0 27.43 4.96 37.09 13.32l-14.89 17.89c-6.53-5.49-13.06-8.62-22.07-8.62-13.19 0-23.38 11.1-23.38 25.08v.26c0 14.76 10.32 25.34 24.82 25.34 6.14 0 10.84-1.31 14.63-3.79v-11.1h-18.02v-18.55h42.06v41.14zm46.76-79.8h24.42l38.92 92.08h-27.17l-6.66-16.33h-35.26l-6.53 16.33h-26.64l38.92-92.08zm102.61 244.55l-128.81-44.28h263.1l-134.29 44.28zm157.56-152.47h-74.18v-91.42h73.53v21.55h-48.46v13.84h43.88v19.98h-43.88v14.5h49.11v21.55zm-50.53-218.52V171.74c0-37.56 18.48-56.11 55.84-56.11h22.34c37.36 0 55.4 18.13 55.4 55.68v61.73h-45.1V173.9c0-12.09-5.59-17.69-17.18-17.69h-7.73c-12.03 0-17.61 5.61-17.61 17.69v190.78c0 12.09 5.59 17.69 17.61 17.69h8.6c11.59 0 17.18-5.61 17.18-17.69v-68.2h45.1v70.35c0 37.56-18.47 56.11-55.84 56.11h-22.77c-37.37 0-55.84-18.56-55.84-56.11zm136.86 190.3c0 18.68-14.76 29.78-36.96 29.78-16.19 0-31.61-5.09-42.84-15.15l14.11-16.85c9.01 7.18 19.07 10.97 29.65 10.97 6.79 0 10.45-2.35 10.45-6.27v-.26c0-3.79-3-5.88-15.41-8.75-19.46-4.44-34.48-9.93-34.48-28.73v-.26c0-16.98 13.45-29.26 35.39-29.26 15.54 0 27.69 4.18 37.61 12.15l-12.67 17.89c-8.36-5.88-17.5-9.01-25.6-9.01-6.14 0-9.14 2.61-9.14 5.88v.26c0 4.18 3.14 6.01 15.8 8.88 21.03 4.57 34.09 11.36 34.09 28.47v.26z" />
-                    </svg><span>&nbsp;在EPIC上游玩</span> </a>
+                    </svg><span i18n="playonepic" style="margin-left:5px;">在EPIC上游玩</span> </a>
             </div>
-
         </div>
     </main>
-
-
     <div class="plate">
         <div class="joinus">
-
             <a href="./joinus.html">
-                <h1>即刻加入STARTRACE</h1>
-                <!-- </a>
-            <a href="./joinus.html"> -->
-                <h1>点击查看详情</h1>
+                <h1 i18n="joinnow">即刻加入STARTRACE</h1>
+                <h1 i18n="joinusclick">点击查看详情</h1>
             </a>
         </div>
     </div>
-
     <div class="plate">
         <div class="juxtaposition" id="supportus">
             <div class="jux1">
                 <a href="https://s.team/chat/L3osKdio" target="_blank">
-                    <img src="./team.png" id="purplepinkicon">
-                    <h1>与制作团队交流！</h1>
+                    <img src="./img/team.png" id="purplepinkicon">
+                    <h1 i18n="chatwithteams">与制作团队交流！</h1>
                 </a>
             </div>
             <div class="jux2">
-
                 <a href="https://afdian.net/@startrace/plan" target="_blank">
-                    <img src="./R-C.png">
-                    <h1>赞助！</h1>
+                    <img src="./img/R-C.png">
+                    <h1 i18n="sponsor">赞助！</h1>
                 </a>
             </div>
         </div>
     </div>
 
-
-
-
-
-
-
-
-    <!-- <footer id="footer">
-    <div class="about">
-        <ul class="o">
-            <li class="footertab">
-                <a href="./useraggrement.html" target="_blank">用户协议</a>
-            </li>
-            <li class="footertab">
-                <a href="./privacy.html" target="_blank">隐私政策</a>
-            </li>
-            <li class="footertab">
-                <a href="#" target="_blank">常见问题</a>
-            </li>
-            <li class="footertab">
-                <a id="joinus" href="./joinus.html" target="_blank">招贤纳士</a>
-            </li>
-            <li class="footertab">
-                <a href="#" target="_blank">联系我们</a>
-                <ul class="i">
-                    <li><a href="">公益合作</a> </li>
-                    <li><a href="">商务合作</a> </li>
-                    <li><a href="">广告投放</a></li>
-                    <li><a href="">报告漏洞</a></li>
-                    <li><a href="">客服服务</a></li>
-                </ul>
-            </li>
-            <li class="footertab">
-                <a href="#" target="_blank">关于</a>
-            </li>
-        </ul>
-        <ul class="o">
-            <li class="footertab">
-                <a href="http://www.beian.gov.cn/" target="_blank">备案号11000000000000</a>
-            </li>
-            <li id="copyright">
-                <a href="#">&copy;STARTRACE</a>
-            </li>
-
-        </ul>
-    </div>
-</footer> -->
     <footer id="footer">
         <div class="footer-about">
             <ul class="footer-option o">
                 <li class="footertab">
-                    <span>关于</span>
+                    <span i18n="about">关于</span>
                     <ul class="i">
-                        <li><a href="#" target="_blank">关于</a></li>
-                        <li><a href="./useraggrement.html" target="_blank">用户协议</a></li>
-                        <li><a href="./privacy.html" target="_blank">隐私政策</a></li>
-                        <li><a href="">光敏性发作警告</a></li>
+                        <li><a href="#" target="_blank" i18n="about">关于</a></li>
+                        <li><a href="./useraggrement.html" target="_blank" i18n="useraggrement">用户协议</a></li>
+                        <li><a href="./privacy.html" target="_blank" i18n="privacy">隐私政策</a></li>
+                        <li><a href="" i18n="photosensitiveepilepsy">光敏性发作警告</a></li>
                     </ul>
                 </li>
                 <li class="footertab">
-                    <span>反馈</span>
+                    <span i18n="feedback">反馈</span>
                     <ul class="i">
-                        <li><a href="">常见问题</a></li>
-                        <li><a href="">报告漏洞</a></li>
-                        <li><a href="">客服服务</a></li>
+                        <li><a href="" i18n="faq">常见问题</a></li>
+                        <li><a href="" i18n="vulnerabilities">报告漏洞</a></li>
+                        <li><a href="" i18n="sopport">客服服务</a></li>
                     </ul>
                 </li>
                 <li class="footertab">
-                    <span>合作</span>
+                    <span i18n="cooperation">合作</span>
                     <ul class="i">
-                        <li><a href="">公益合作</a></li>
-                        <li><a href="">商务合作</a></li>
-                        <li><a href="">广告投放</a></li>
-                        <li><a id="joinus" href="./joinus.html" target="_blank">招贤纳士</a></li>
+                        <li><a href="" i18n="pubcoop">公益合作</a></li>
+                        <li><a href="" i18n="buscoop">商务合作</a></li>
+                        <li><a href="" i18n="adcoop">广告投放</a></li>
+                        <li><a id="joinus" href="./joinus.html" target="_blank" i18n="joinus">招贤纳士</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="footer-cannal" style="display: block;">
-                <a href="https://github.com/STARTRACEX" target="_blank">
-                    <svg width="33" height="33" viewBox="0 0 48 48" fill="none">
-                        <rect width="48" height="48" fill="white" fill-opacity="0.01" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4ZM0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z"
-                            fill="#f4f4f4" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M19.183 45.4715C18.9896 45.2218 18.9896 42.9972 19.183 38.798C17.1112 38.8695 15.8022 38.7257 15.256 38.3666C14.4368 37.8279 13.6166 36.1666 12.8889 34.9958C12.1612 33.825 10.546 33.6399 9.8938 33.3782C9.24158 33.1164 9.07785 32.0495 11.691 32.8564C14.3042 33.6633 14.4316 35.8606 15.256 36.3744C16.0804 36.8882 18.0512 36.6634 18.9446 36.2518C19.8379 35.8402 19.7722 34.3077 19.9315 33.7006C20.1329 33.1339 19.423 33.0082 19.4074 33.0036C18.5353 33.0036 13.9537 32.0072 12.6952 27.5705C11.4368 23.1339 13.0579 20.234 13.9227 18.9874C14.4992 18.1563 14.4482 16.3851 13.7697 13.6736C16.2333 13.3588 18.1344 14.1342 19.4732 16C19.4745 16.0107 21.2283 14.9571 24 14.9571C26.7718 14.9571 27.7551 15.8153 28.514 16C29.2728 16.1847 29.8798 12.734 34.5666 13.6736C33.5881 15.5968 32.7686 18 33.3941 18.9874C34.0195 19.9748 36.4742 23.1146 34.9664 27.5705C33.9611 30.5412 31.9851 32.3522 29.0382 33.0036C28.7002 33.1114 28.5313 33.2854 28.5313 33.5254C28.5313 33.8855 28.9881 33.9248 29.6463 35.6116C30.085 36.7361 30.1167 39.9479 29.7413 45.2469C28.7904 45.489 28.0506 45.6515 27.5219 45.7346C26.5845 45.8819 25.5667 45.9645 24.5666 45.9964C23.5666 46.0283 23.2193 46.0247 21.8368 45.896C20.9151 45.8102 20.0305 45.6687 19.183 45.4715Z"
-                            fill="#f4f4f4" />
+                <a class="footerqr" href="https://github.com/STARTRACEX" target="_blank">
+                    <svg t="1655171075206" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="2859" width="36" height="36">
+                        <path
+                            d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9 23.5 23.2 38.1 55.4 38.1 91v112.5c0.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"
+                            p-id="2860" fill="#f4f4f4"></path>
                     </svg>
                 </a>
                 <a class="footerqr" href="#footer">
-                    <svg t="1655135087965" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" p-id="8317" width="36" height="36">
+                    <svg style="transform: translateY(1.2px);" t="1655135087965" class="icon" viewBox="0 0 1024 1024"
+                        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8317" width="36" height="36">
                         <path
                             d="M684.2624 336.639078c10.256998 0 20.405555 0.753152 30.472294 1.873715C687.354982 211.026227 551.049933 116.304896 395.467162 116.304896c-173.940736 0-316.424704 118.557184-316.424704 269.103923 0 86.8992 47.403622 158.259405 126.61801 213.608038l-31.648051 95.184896 110.615859-55.468339c39.581082 7.834419 71.337677 15.888896 110.837965 15.888896 9.929523 0 19.775181-0.490189 29.539021-1.257677-6.182093-21.154816-9.763738-43.312435-9.763738-66.302054C415.242342 448.825139 533.955994 336.639078 684.2624 336.639078zM514.125517 250.849178c23.825613 0 39.60873 15.673958 39.60873 39.484314 0 23.715123-15.783117 39.607091-39.60873 39.607091-23.716147 0-47.513088-15.891968-47.513088-39.607091C466.612429 266.522112 490.40937 250.849178 514.125517 250.849178zM292.671693 329.939456c-23.713075 0-47.648154-15.891968-47.648154-39.607091 0-23.810253 23.934054-39.484314 47.648154-39.484314 23.715123 0 39.499264 15.673958 39.499264 39.484314C332.170957 314.04759 316.386816 329.939456 292.671693 329.939456zM973.059686 583.260979c0-126.504141-126.593434-229.620736-268.773478-229.620736-150.553088 0-269.128499 103.116493-269.128499 229.620736 0 126.72215 118.576538 229.620736 269.128499 229.620736 31.510938 0 63.294157-7.945933 94.942208-15.877632l86.79127 47.525376-23.796941-79.073894C925.73696 717.806285 973.059686 654.621286 973.059686 583.260979zM617.027379 543.668224c-15.755469 0-31.648051-15.673958-31.648051-31.661056 0-15.766118 15.892582-31.643648 31.648051-31.643648 23.934054 0 39.60873 15.877632 39.60873 31.643648C656.636109 527.994266 640.961434 543.668224 617.027379 543.668224zM791.077581 543.668224c-15.647027 0-31.430144-15.673958-31.430144-31.661056 0-15.766118 15.783117-31.643648 31.430144-31.643648 23.715123 0 39.605658 15.877632 39.605658 31.643648C830.684262 527.994266 814.793626 543.668224 791.077581 543.668224z"
                             p-id="8318" fill="#f4f4f4"></path>
@@ -227,7 +165,7 @@
                 </a>
                 <a class="footerqr" href="#footer">
                     <?xml version="1.0" encoding="UTF-8"?><svg width="36" height="36" viewBox="0 0 48 48" fill="none"">
-                        <path d=" M23 43H43V5H14V15" stroke="#f4f4f4" stroke-width="3" stroke-linejoin="round" />
+                    <path d=" M23 43H43V5H14V15" stroke="#f4f4f4" stroke-width="3" stroke-linejoin="round" />
                     <path d="M5 15H23V43H5L5 15Z" fill="none" stroke="#f4f4f4" stroke-width="3"
                         stroke-linejoin="round" />
                     <path d="M13 37H15" stroke="#f4f4f4" stroke-width="3" stroke-linecap="round"
@@ -240,11 +178,12 @@
             </div>
         </div>
         <div id="footer-beian">
-            <a href="http://www.beian.gov.cn/" target="_blank">备案号11000000000000</a>
+            <a href="http://www.beian.gov.cn/" target="_blank" i18n="llpb"> &nbsp; </a>
+            <a href="./coockie.html">Cookie</a>
         </div>
         <div id="footer-copyright">
             <a href="">&copy;STARTRACE</a>
-            <a href="https://github.com/STARTRACEX">页面设计：计科2101王世超</a>
+            <a href="https://github.com/STARTRACEX" i18n="pagedesine">页面设计：计科2101王世超</a>
         </div>
     </footer>
     <div id="totop">
@@ -257,7 +196,10 @@
             </svg>
         </a>
     </div>
-    <script src="./index.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.i18n.min.js"></script>
+    <script src="./js/lang.js"></script>
 </body>
 
 </html>
