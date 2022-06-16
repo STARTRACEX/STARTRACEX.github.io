@@ -58,6 +58,9 @@ p {
 a[onclick] {
     cursor: pointer;
 }
+button:hover {
+    cursor: pointer;
+}
 
 .main {
     position: relative;
@@ -116,10 +119,9 @@ nav .right {
 
 .option a {
     display: block;
-    cursor: pointer;
     height: 100%;
     text-align: center;
-    transition: background-color 162.951ms ease 0ms;
+    transition: background-color 152ms ;
 }
 
 .option a:hover {
