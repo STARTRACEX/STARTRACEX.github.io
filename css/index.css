@@ -166,13 +166,7 @@ footer span:not(.colorfulspan) {
     border-bottom: #c7c7c745 1.5px solid;
 }
 
-footer ul.o {
-    display: flex;
-    margin: 5px;
-}
-
 footer li {
-    width: 10.2em;
     margin: 8px 0;
 }
 
@@ -188,13 +182,18 @@ footer li a:hover {
     text-decoration: underline;
     color: #6993a0;
 }
-
+.footertab{
+    width: 10em;
+}
 #footer-copyright a {
     display: block;
     cursor: crosshair;
     padding: 4px;
 }
-
+#fo-list{
+    display: flex;
+    flex-wrap: wrap;
+}
 .footerqr {
     position: relative;
 }
