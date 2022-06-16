@@ -257,7 +257,7 @@
 }
 
 .charadis:nth-child(2n) {
-    background-color: #dddddd;
+    background-color: #eeeeee;
     flex-direction: row-reverse;
 }
 

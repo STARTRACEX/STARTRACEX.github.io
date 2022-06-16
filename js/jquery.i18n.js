@@ -18,20 +18,6 @@ $(document).ready(function() {
                     console.log("i18n is ready.");
                 }
             });
-            /*切换为中文 - 按钮*/
-            $(".chinese").click(function() {
-                $("[i18n]").i18n({
-                    defaultLang: "cn",
-                    filePath: "../i18n/"
-                });
-            });
-            /*切换为英文 - 按钮*/
-            $(".english").click(function() {
-                $("[i18n]").i18n({
-                    defaultLang: "en",
-                    filePath: "../i18n/"
-                });
-            });
         });
 (function ($) {
     $.fn.extend({
