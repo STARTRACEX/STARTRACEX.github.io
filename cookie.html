@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cookie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="startrace">
+    <meta name="description" content="了解关于STARTRACE">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+    <style>
+        body {
+            background-color: rgb(30, 34, 39);
+            font-family: "Noto Sans SC", sans-serif;
+            color: rgb(221, 221, 221);
+            margin: 0 35px 15px 35px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            border-radius: 10px;
+            margin: 3px;
+            height: 2em;
+            width: 5.2em;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="en">
+        <h1>Cookie Policy</h1>
+        <h2> To ensure the normal operation of the website, we will use cookie and similar technologies</h2>
+        <h2>At present, the following contents will be tracked through cookie or similar technologies:
+        </h2>
+        <h3>Your language preferences(immutable)</h2好>
+        
+    </div>
+    
+        <div id="zh" >
+            <h1>Cookie 政策</h1>
+            <h2 >为保证网站的正常运行，我们会使用cookie和类似技术</h2>
+            
+            <h2>目前，将通过cookie或类似技术跟踪以下内容：</h2>
+            <h3>你的语言首选项（必须）</h3>
+            
+        </div>
+   
+    <button id="swichzh" type="button">中文</button>
+    <button id="swichen" type="button">English</button>
+    <script>
+        var lang = navigator.language;
+        lang = lang.substr(0, 2);
+        if (lang == "zh") {
+            document.getElementById("zh").style.display = "block";
+            document.getElementById("en").style.display = "none";
+        } else {
+            document.getElementById("zh").style.display = "none";
+            document.getElementById("en").style.display = "block";
+        }
+        document.getElementById("swichzh").onclick = function () {
+            document.getElementById("zh").style.display = "block";
+            document.getElementById("en").style.display = "none";
+        };
+        document.getElementById("swichen").onclick = function () {
+            document.getElementById("zh").style.display = "none";
+            document.getElementById("en").style.display = "block";
+        };
+    </script>
+</body>
+
+</html>
