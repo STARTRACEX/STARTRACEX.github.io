@@ -1,7 +1,7 @@
 {
-    "home": "首页",
-    "login": "登录",
-    "register": "注册",
+    "Home": "首页",
+    "Login": "登录",
+    "Register": "注册",
     "me": "个人",
     "order": "订单",
     "friend": "好友",

@@ -1,7 +1,7 @@
 {
-    "home": "Home",
-    "login": "Login",
-    "register": "Register",
+    "Home": "Home",
+    "Login": "Login",
+    "Register": "Register",
     "me": "Personal",
     "order": "Orders",
     "friends": "Friends",
