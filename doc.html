@@ -49,12 +49,21 @@
             background-color: rgba(0, 0, 0, 0.420);
         }
 
-        #show {
+        .tips {
             background-color: #7ea1a6;
-            height: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
+            
+        }
+
+        .tips h2 {
+            font-size: 160%;
+            margin: 20px;
+            text-align: center;
+            text-shadow: 1px 1.2px 12px rgba(255, 255, 255, 0.5);
+            color: rgb(233, 233, 233);
+            font-weight: 700;
         }
 
         button#showmore {
@@ -65,7 +74,6 @@
         }
 
         #more {
-            background-color: rgb(163, 186, 178);
             display: none;
         }
 
@@ -75,23 +83,34 @@
             min-width: 342px;
         }
 
-        #more div {
+        #video {
+            padding: 50px 70px;
             display: flex;
-            padding: 30px 50px;
             overflow-x: auto;
         }
 
-        a[download] h2 {
-            color: rgb(46, 84, 235);
+        #file {
+            display: flex;
+            padding: 15px 40px 30px;
+            flex-direction: column;
+            align-items: stretch;
+            background-color: rgb(163, 186, 178);
+        }
+
+        #more a[download] {
+            color: rgb(40, 60, 143);
             font-size: 125%;
             font-weight: 700;
             padding: 18px;
+            margin: 14px;
             background-color: #7ea1a677;
             border-radius: 12px;
         }
 
-        a:hover {
-            transform: scale(1.045);
+        #more a:hover {
+            color: rgb(4, 36, 92);
+            transform: scale(1.01);
+            background-color: #6ba7b177;
         }
 
         @media screen and (max-width:680px) {
@@ -104,18 +123,18 @@
                 width: 100vw;
                 object-fit: cover;
             }
-            .shader h2{
+
+            .shader h2 {
                 width: 100%;
                 height: 1.6em;
-                
+
             }
+
             #show {
                 height: 280px;
                 font-size: 140%;
             }
-            a[download] h2 {
-                font-size: 140%;
-            }
+
         }
     </style>
 </head>
@@ -124,40 +143,44 @@
     <nav id="nav">
         <div class="main">
             <div class="left">
-                <h1><a class=".hidden" href="./index.html">STARTRACE</a> <span>|</span> <em i18n="home">文献库</em></h1>
+                <h1><a href="./index.html">STARTRACE</a> <span>|</span> <em i18n="home">文献库</em></h1>
             </div>
         </div>
     </nav>
-
-    <div id="DExhibitor">
-        <ul class="ulshaders">
-            <li class="shader"><a href=""><img src="./img/jiji.jpg">
-                    <h2>小鸡恰恰舞</h2>
-                </a>
-
-            </li>
-            <li class="shader"><a href=""> <img src="./img/jtjt.jpg">
-                    <h2>鸡汤特工</h2>
-                </a>
-
-            </li>
-            <li class="shader"><a href=""><img src="./img/tztz.jpg">
-                    <h2>土猪卖瓜</h2>
-                </a>
-
-            </li>
-            <li class="shader"><a href=""><img src="./img/skyfire.jpg">
-                    <h2>天火大事件</h2>
-                </a>
-
-            </li>
-        </ul>
-    </div>
-    <div id="show">
-        <button id="showmore">查看更多</button>
-    </div>
+    
+        <div class="tips">
+            <h2>最近更新</h2>
+        </div>
+        <div id="DExhibitor">
+            <ul class="ulshaders">
+                <li class="shader"><a href=""><img src="./img/jiji.jpg">
+                        <h2>小鸡恰恰舞</h2>
+                    </a>
+        
+                </li>
+                <li class="shader"><a href=""> <img src="./img/jtjt.jpg">
+                        <h2>鸡汤特工</h2>
+                    </a>
+        
+                </li>
+                <li class="shader"><a href=""><img src="./img/tztz.jpg">
+                        <h2>土猪卖瓜</h2>
+                    </a>
+        
+                </li>
+                <li class="shader"><a href=""><img src="./img/skyfire.jpg">
+                        <h2>天火大事件</h2>
+                    </a>
+        
+                </li>
+            </ul>
+        </div>
+        <div id="show" class="tips" style="height: 90px;">
+            <button id="showmore">查看更多</button>
+        </div>
+    
     <div id="more">
-        <div style="background-color: #82a9af;" >
+        <div id="video" style="background-color: #c5dfe3;">
             <iframe src="//player.bilibili.com/player.html?aid=371283516&bvid=BV13Z4y1u7FJ&cid=212894276&page=1"
                 scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
             <iframe src="//player.bilibili.com/player.html?aid=328961465&bvid=BV1tA411v7p4&cid=215761641&page=1"
@@ -171,10 +194,17 @@
             <iframe src="//player.bilibili.com/player.html?aid=243981909&bvid=BV1xv411q7Yg&cid=214502213&page=1"
                 scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
         </div>
-        <div>
-            <a href="./download/SIMS.zip" title="下载-SIMS" download="SIMS">
-                <h2>下载-SIMS</h2>
+        <div class="tips">
+            <h2>资源中心</h2>
+        </div>
+        <div id="file">
+
+            <a href="./download/SIMS.zip" download="SIMS">
+                下载-SIMS
             </a>
+            <a href="./download/bu.zip" download="618backup">下载本站的一次备份</a>
+            <a href="./download/C.zip" download=".vscode">下载C的配置文件</a>
+
         </div>
     </div>
     <script>
@@ -218,7 +248,7 @@
                     <ul>
                         <li><a href="./doc.html">转到文献库</a></li>
                     </ul>
-    
+
                 </li>
             </ul>
             <div class="footer-cannal" style="display: block;">
@@ -250,9 +280,12 @@
                 <a class="footerqr" href="#footer">
                     <?xml version="1.0" encoding="UTF-8"?><svg width="36" height="36" viewBox="0 0 48 48" fill="none"">
                         <path d=" M23 43H43V5H14V15" stroke="#f4f4f4" stroke-width="3" stroke-linejoin="round" />
-                    <path d="M5 15H23V43H5L5 15Z" fill="none" stroke="#f4f4f4" stroke-width="3" stroke-linejoin="round" />
-                    <path d="M13 37H15" stroke="#f4f4f4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M28 37H30" stroke="#f4f4f4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5 15H23V43H5L5 15Z" fill="none" stroke="#f4f4f4" stroke-width="3"
+                        stroke-linejoin="round" />
+                    <path d="M13 37H15" stroke="#f4f4f4" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M28 37H30" stroke="#f4f4f4" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
                     </svg>
                     <img src="./img/homeqr.png">
                 </a>
