@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
 
-    <script src="./js/index.js">
-
-    </script>
+    <script src="./js/index.js"></script>
     <style>
         .ulshaders {
             width: 100vw;
@@ -140,21 +138,14 @@
             }
 
         }
-
-        
-
-        
     </style>
 </head>
 
 <body>
-
-    
-    
     <script>
-        Nav("文献库","0");
+        Nav("文献库", "0");
     </script>
-    
+
     <div class="tips">
         <h2>最近更新</h2>
     </div>
@@ -182,7 +173,7 @@
             </li>
         </ul>
     </div>
-    <div id="show" class="tips" style="height: 90px;">
+    <div id="show" class="tips" style="height:88px">
         <button id="showmore">查看更多</button>
     </div>
 
@@ -219,16 +210,12 @@
     <script>
         Footer();
         LoadingKf();
+        document.getElementById("showmore").onclick = function () {
+            document.getElementById("more").style.display = "block";
+            document.getElementById("show").style.display = "none";
+        };
+
     </script>
-    
-        <script src="./js/jquery.js"></script>
-        <script>
-            document.getElementById("showmore").onclick = function () {
-                document.getElementById("more").style.display = "block";
-                document.getElementById("show").style.display = "none";
-            };
-            
-        </script>
 </body>
 
 </html>

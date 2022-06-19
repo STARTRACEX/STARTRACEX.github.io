@@ -10674,19 +10674,15 @@
 							doc["client" + name]
 						);
 					}
-
 					return value === undefined ?
-
 						// Get width or height on the element, requesting but not forcing parseFloat
 						jQuery.css(elem, type, extra) :
-
 						// Set width or height on the element
 						jQuery.style(elem, type, value, extra);
 				}, type, chainable ? margin : undefined, chainable);
 			};
 		});
 	});
-
 
 	jQuery.each([
 		"ajaxStart",
@@ -10700,8 +10696,6 @@
 			return this.on(type, fn);
 		};
 	});
-
-
 
 
 	jQuery.fn.extend({
@@ -10743,9 +10737,6 @@
 			};
 		}
 	);
-
-
-
 
 	// Support: Android <=4.0 only
 	// Make sure we trim BOM and NBSP
@@ -10796,9 +10787,7 @@
 	jQuery.isWindow = isWindow;
 	jQuery.camelCase = camelCase;
 	jQuery.type = toType;
-
 	jQuery.now = Date.now;
-
 	jQuery.isNumeric = function (obj) {
 
 		// As of jQuery 3.0, isNumeric is limited to
@@ -10818,9 +10807,6 @@
 			"" :
 			(text + "").replace(rtrim, "");
 	};
-
-
-
 	// Register as a named AMD module, since jQuery can be concatenated with other
 	// files that may use define, but not via a proper concatenation script that
 	// understands anonymous AMD modules. A named AMD is safest and most robust
@@ -10828,7 +10814,6 @@
 	// derived from file names, and jQuery is normally delivered in a lowercase
 	// file name. Do this after creating the global so that if an AMD module wants
 	// to call noConflict to hide this version of jQuery, it will work.
-
 	// Note that for maximum portability, libraries that are not jQuery should
 	// declare themselves as anonymous modules, and avoid setting a global if an
 	// AMD loader is present. jQuery is a special case. For more information, see
@@ -10840,17 +10825,12 @@
 		});
 	}
 
-
-
-
 	var
 
 		// Map over jQuery in case of overwrite
 		_jQuery = window.jQuery,
-
 		// Map over the $ in case of overwrite
 		_$ = window.$;
-
 	jQuery.noConflict = function (deep) {
 		if (window.$ === jQuery) {
 			window.$ = _$;
@@ -10869,9 +10849,5 @@
 	if (typeof noGlobal === "undefined") {
 		window.jQuery = window.$ = jQuery;
 	}
-
-
-
-
 	return jQuery;
 });

@@ -1,4 +1,7 @@
-
+document.write("<script type='text/javascript' src='.\/js\/jquery.js'></script>");
+document.write("<script type='text/javascript' src='.\/js\/jquery.i18n.js'></script>");
+document.write("<script type='text/javascript' src='.\/js\/lang.js'></script>");
+//全局js
 var logo = '  _____ _______       _____ _______ _____            _____ ______ \n / ____|__   __|/\\   |  __ \\__   __|  __ \\     /\\   / ____|  ____|\n| (___    | |  /  \\  | |__) | | |  | |__) |   /  \\ | |    | |__   \n \\___ \\   | | / /\\ \\ |  _  /  | |  |  _  /   / /\\ \\| |    |  __|  \n ____) |  | |/ ____ \\| | \\ \\  | |  | | \\ \\  / ____ \\ |____| |____ \n|_____/   |_/_/    \\_\\_|  \\_\\ |_|  |_|  \\\\_\/_/    \\_\\_____|______|'
 console.log(logo);
 function ud() {
@@ -61,6 +64,7 @@ function Nav(name, i) {
     document.write("            <\/div>");
     document.write("        <\/div>");
     document.write("    <\/nav>");
+    
 }
 //底部和回到顶部，在页面末尾调用
 function Footer() {
@@ -169,15 +173,10 @@ function LoadingKf() {
     document.write("        <div class=\"kf_spinner\"><\/div>");
     document.write("<\/div>");
     document.onreadystatechange = function () {
-        $('body').css({ 'overflow-y': 'hidden' });
         $('html').css({ 'overflow-y': 'hidden' });
         if (document.readyState == "complete") {
             $("#loading").hide();
-            $('body').css({ 'overflow-y': 'auto' });
             $('html').css({ 'overflow-y': 'auto' });
         }
     }
 }
-
-
-
