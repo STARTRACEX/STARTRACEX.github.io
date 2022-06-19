@@ -1,5 +1,5 @@
-document.write("<script type='text/javascript' src='.\/js\/jquery.js'></script>");
-document.write("<script type='text/javascript' src='.\/js\/jquery.i18n.js'></script>");
+document.write("<script type='text/javascript' src='.\/js\/jquery.min.js'></script>");
+document.write("<script type='text/javascript' src='.\/js\/jquery.i18n.min.js'></script>");
 document.write("<script type='text/javascript' src='.\/js\/lang.js'></script>");
 //全局js
 var logo = '  _____ _______       _____ _______ _____            _____ ______ \n / ____|__   __|/\\   |  __ \\__   __|  __ \\     /\\   / ____|  ____|\n| (___    | |  /  \\  | |__) | | |  | |__) |   /  \\ | |    | |__   \n \\___ \\   | | / /\\ \\ |  _  /  | |  |  _  /   / /\\ \\| |    |  __|  \n ____) |  | |/ ____ \\| | \\ \\  | |  | | \\ \\  / ____ \\ |____| |____ \n|_____/   |_/_/    \\_\\_|  \\_\\ |_|  |_|  \\\\_\/_/    \\_\\_____|______|'

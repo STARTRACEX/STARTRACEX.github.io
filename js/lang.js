@@ -60,7 +60,7 @@ $(document).ready(function () {
             return;
         }
         if (lang == "en") {
-            personaloption.style.width = "4.75em";
+            personaloption.style.width = "4.9em";
         }
         if (lang == "ru") {
             personaloption.style.width = "4.2em";
