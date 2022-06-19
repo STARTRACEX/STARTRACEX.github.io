@@ -41,7 +41,7 @@ function Nav(name, i) {
         }
         if (i > 0) {
             document.write("                <div class=\"setting\">");
-            document.write("                    <a href=\"\" style=\"cursor: default;\">");
+            document.write("                    <a style=\"cursor: default;\">");
             document.write("                        <?xml version=\"1.0\" encoding=\"UTF-8\"?><svg width=\"32\" height=\"32\" viewBox=\"0 0 48 48\"");
             document.write("                            fill=\"none\">");
             document.write("                            <rect width=\"48\" height=\"48\" fill=\"white\" fill-opacity=\"0.01\" \/>");

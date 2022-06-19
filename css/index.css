@@ -238,7 +238,6 @@ footer li a:hover {
 /* 以下主要为表单样式 */
 div.platform {
     width: clamp(300px, 80vw, 640px);
-
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
