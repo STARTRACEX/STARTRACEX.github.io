@@ -6,6 +6,7 @@ body,html {
     min-height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
+    cursor: url(../img/arrow.cur),auto;
 }
 
 nav {
@@ -50,12 +51,11 @@ p {
     text-decoration: none;
 }
 
-a[onclick] {
-    cursor: pointer;
+a,button,#Sumbit {
+    cursor: url(../img/pointer.cur),pointer;
 }
-
-button:hover {
-    cursor: pointer;
+input{
+    cursor: url(../img/beam.cur),auto;
 }
 
 .main {
@@ -310,7 +310,6 @@ form .colorfulspan {
     border-width: 0;
     font-size: 18px;
     border-radius: 0.442em;
-    cursor: pointer;
     margin: 12px 0 18px 0;
 }
 
