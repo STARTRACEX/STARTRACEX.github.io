@@ -154,7 +154,7 @@ footer div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px;
+    min-width: 200px;
 }
 
 footer span:not(.colorfulspan) {
@@ -164,7 +164,7 @@ footer span:not(.colorfulspan) {
     border-bottom: #c7c7c745 1.5px solid;
 }
 
-footer li {
+footer a,footer li {
     margin: 8px 0;
 }
 
@@ -188,7 +188,6 @@ footer li a:hover {
 #footer-copyright a {
     display: block;
     cursor: crosshair;
-    padding: 4px;
 }
 
 #fo-list {

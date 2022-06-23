@@ -65,6 +65,7 @@
     height: 60vh;
     min-height: 300px;
     font-size: 133%;
+    align-items: center;
 }
 #supportus{
     background-image: linear-gradient(to top, #aa86e7, #ac8ae3, #ae8ede, #b092da, #b196d6, #b89dd7, #bea5d8, #c4acd9, #d0b8e0, #dbc4e7, #e6d0ee, #f1ddf6);
@@ -76,19 +77,15 @@
     min-width: 170px;
     max-width: 210px;
 }
-.team,
-.sponsor {
-    width: 50%;
-}
+
 
 .juxtaposition a {
-    height: 100%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     font-size: 110%;
-
 }
 .juxtaposition a>* {
     transition: 0.16s;
@@ -294,4 +291,89 @@
 #joinoption h1{
     color: rgb(99, 99, 99);
     font-weight: 600;
+}
+
+#firstPlateOption{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+}
+#firstPlateOption div{
+    width: calc(100% / 3);
+    height: 140px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#firstPlateOption a{
+    height: 70%;
+    width: 8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#firstPlateOption h2{
+    margin-top: 7px;
+    font-size: 145%;
+}
+
+
+.kf_shake {
+    animation-name: shake-bl;
+    animation-duration: 3.8s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+@keyframes shake-bl {
+    80% {
+        transform: rotate(0deg);
+        transform-origin: 0 100%;
+    }
+
+    82% {
+        transform: rotate(2deg);
+    }
+
+    84% {
+        transform: rotate(-4deg);
+    }
+
+    86% {
+        transform: rotate(4deg);
+    }
+
+    88% {
+        transform: rotate(-4deg);
+    }
+
+    90% {
+        transform: rotate(4deg);
+    }
+
+    92% {
+        transform: rotate(4deg);
+    }
+
+    94% {
+        transform: rotate(-4deg);
+    }
+
+    96% {
+        transform: rotate(-2deg);
+    }
+
+    98% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 0 100%;
+    }
 }
