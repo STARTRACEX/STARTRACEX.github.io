@@ -12,7 +12,6 @@ $(document).ready(function () {
         filePrefix: "i18n_",
         fileSuffix: "",
         forever: true
-        
     });
     $("#lang_zh").click(function () {
         $("[i18n]").i18n({

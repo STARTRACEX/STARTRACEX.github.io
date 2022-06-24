@@ -66,8 +66,10 @@ function Nav(name, i) {
     document.write("    <\/nav>");
     
 }
+
 //底部和回到顶部，在页面末尾调用
 function Footer() {
+    Totop();
     document.write("<footer id=\"footer\">");
     document.write("        <div class=\"footer-about\">");
     document.write("            <ul id=\"fo-list\" class=\"footer-option o\">");
@@ -159,10 +161,22 @@ function Footer() {
     document.write("            <a href=\"\">&copy;STARTRACE<\/a>");
     document.write("            <a href=\"https:\/\/github.com\/STARTRACEX\" i18n=\"pagedesine\">页面设计：王世超<\/a>");
     document.write("        <\/div>");
-    document.write("    <\/footer>");
+    document.write("<\/footer>");
+    // totop level
+    document.write("<div id=\"totop\">" +
+        "        <a>" +
+        "            <svg t=\"1650535477964\" class=\"icon\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"#\" p-id=\"5015\" width=\"36\"" +
+        "                height=\"36\">" +
+        "                <path" +
+        "                    d=\"M484.538555 297.401434 78.508052 703.407378c-11.784394 11.813047-11.784394 30.912034 0 42.724057 11.81714 11.81407 30.94171 11.81407 42.757826 0l386.211109-386.181433 379.830795 379.806235c11.453866 11.482519 30.039153 11.482519 41.491996 0 11.511171-11.453866 11.511171-30.039153 0-41.516556L534.372543 303.776631c-1.543146-1.539053-3.417843-2.296299-5.200442-3.412726-0.691755-0.935302-1.055029-2.085498-1.933025-2.962471-11.784394-11.784394-30.912034-11.784394-42.695405 0L484.538555 297.401434zM484.538555 297.401434\"" +
+        "                    p-id=\"5016\" fill=\"#f7f7f7\"></path>" +
+        "            </svg>" +
+        "        </a>" +
+        "    </div>");
 }
 //加载动画，在任何地方调用，需要jqury
 function LoadingKf() {
+    
     document.write("<div id=\"loading\">");
     document.write("        <div class=\"kf_spinner\"><\/div>");
     document.write("<\/div>");
@@ -173,4 +187,17 @@ function LoadingKf() {
             $('html').css({ 'overflow-y': 'auto' });
         }
     }
+    $("#totop").hide();
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 0.15 * ($(window).height())) {
+            $("#totop").fadeIn()
+        } else {
+            $("#totop").fadeOut()
+        }
+    });
+    $("#totop").click(function () {
+        $('html,body').animate({
+            'scrollTop': 0
+        }, 200)
+    });
 }
