@@ -5,7 +5,7 @@ $(document).ready(function () {
         lang = lang.substring(0, 2);
         setCookie("lang", lang, 365);
     }
-    cssControl(lang);
+    DisplayContral(lang);
     $("[i18n]").i18n({
         lang: lang,
         filePath: "./i18n/",
@@ -19,7 +19,7 @@ $(document).ready(function () {
             filePath: "./i18n/"
         });
         lang = "zh";
-        cssControl(lang);
+        DisplayContral(lang);
         setCookie("lang", lang, 365);
     });
     $("#lang_ru").click(function () {
@@ -28,7 +28,7 @@ $(document).ready(function () {
             filePath: "./i18n/"
         });
         lang = "ru";
-        cssControl(lang);
+        DisplayContral(lang);
         setCookie("lang", lang, 365);
     });
     $("#lang_en").click(function () {
@@ -38,7 +38,7 @@ $(document).ready(function () {
         });
         lang = "en";
         setCookie("lang", lang, 365);
-        cssControl(lang);
+        DisplayContral(lang);
     });
     function getCookie(name) {
         var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
@@ -53,19 +53,23 @@ $(document).ready(function () {
         exp.setTime(exp.getTime() + time * 24 * 60 * 60 * 1000);
         document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
     }
-    function cssControl(lang) {
-        var personaloption = document.getElementById("personalOption");
-        if (personaloption == null) {
-            return;
-        }
-        if (lang == "en") {
-            personaloption.style.width = "4.9em";
-        }
+
+    function DisplayContral(lang) {
         if (lang == "ru") {
-            personaloption.style.width = "4.2em";
+            $("#personalOption").css("width", "4.2em");
+            $(".Language_Swich").hide();
+            $(".Show_zh").show();
+        
         }
         if (lang == "zh") {
-            personaloption.style.width = "4em";
+            $("#personalOption").css("width", "4em");
+            $(".Language_Swich").hide();
+            $(".Show_zh").show();
+        }
+        else{
+            $("#personalOption").css("width", "5em");
+            $(".Language_Swich").hide();
+            $(".Show_en").show();
         }
     }
 });

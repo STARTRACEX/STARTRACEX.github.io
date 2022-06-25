@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <title>Cookie</title>
@@ -8,6 +8,8 @@
     <meta name="keywords" content="startrace">
     <meta name="description" content="了解关于STARTRACE">
     <link rel="stylesheet" href="./css/Noto+Sans+SC.css">
+    <script src="./js/index.js"></script>
+    
     <style>
         body {
             background-color: rgb(30, 34, 39);
@@ -31,45 +33,21 @@
 </head>
 
 <body>
-    <div id="en">
+    <div class="Language_Swich Show_en">
         <h1>Cookie Policy</h1>
         <h2> To ensure the normal operation of the website, we will use cookie and similar technologies</h2>
         <h2>At present, the following contents will be tracked through cookie or similar technologies:
         </h2>
         <h3>Your language preferences(immutable)</h2好>
-
     </div>
-
-    <div id="zh">
+    <div class="Language_Swich Show_zh">
         <h1>Cookie 政策</h1>
         <h2>为保证网站的正常运行，我们会使用cookie和类似技术</h2>
-
         <h2>目前，将通过cookie或类似技术跟踪以下内容：</h2>
         <h3>你的语言首选项（必须）</h3>
-
     </div>
-
-    <button id="swichzh" type="button">中文</button>
-    <button id="swichen" type="button">English</button>
-    <script>
-        var lang = navigator.language;
-        lang = lang.substr(0, 2);
-        if (lang == "zh") {
-            document.getElementById("zh").style.display = "block";
-            document.getElementById("en").style.display = "none";
-        } else {
-            document.getElementById("zh").style.display = "none";
-            document.getElementById("en").style.display = "block";
-        }
-        document.getElementById("swichzh").onclick = function () {
-            document.getElementById("zh").style.display = "block";
-            document.getElementById("en").style.display = "none";
-        };
-        document.getElementById("swichen").onclick = function () {
-            document.getElementById("zh").style.display = "none";
-            document.getElementById("en").style.display = "block";
-        };
-    </script>
+    <button id="lang_zh">简体中文</button>
+    <button id="lang_en">English</button>
 </body>
 
 </html>

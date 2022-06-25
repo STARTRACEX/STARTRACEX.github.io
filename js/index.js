@@ -9,7 +9,7 @@ function ud() {
 }
 //在顶端调用，创建以name为描述,name为i18n名的导航条,
 //以i判定是否添加.personal与.setting,
-//大于1：全部添加，大于0小于等于1：仅添加.setting.小于等于0: 全部掠过
+//大于1：全部添加，大于0小于等于1：仅添加.setting.小于等于0: 全部略过
 function Nav(name, i) {
     document.write("<nav id=\"nav\">");
     document.write("        <div class=\"main\">");
@@ -54,9 +54,9 @@ function Nav(name, i) {
             document.write("                        <\/svg>");
             document.write("                    <\/a>");
             document.write("                    <div class=\"option\">");
-            document.write("                        <a id=\"lang_zh\" href=\"\">简体中文<\/a>");
-            document.write("                        <a id=\"lang_en\" href=\"\">English<\/a>");
-            document.write("                        <a id=\"lang_ru\" href=\"\">русский<\/a>");
+            document.write("                        <a id=\"lang_zh\">简体中文<\/a>");
+            document.write("                        <a id=\"lang_en\">English<\/a>");
+            document.write("                        <a id=\"lang_ru\">русский<\/a>");
             document.write("                    <\/div>");
             document.write("                <\/div>");
         }
@@ -69,7 +69,6 @@ function Nav(name, i) {
 
 //底部和回到顶部，在页面末尾调用
 function Footer() {
-    Totop();
     document.write("<footer id=\"footer\">");
     document.write("        <div class=\"footer-about\">");
     document.write("            <ul id=\"fo-list\" class=\"footer-option o\">");
@@ -176,7 +175,6 @@ function Footer() {
 }
 //加载动画，在任何地方调用，需要jqury
 function LoadingKf() {
-    
     document.write("<div id=\"loading\">");
     document.write("        <div class=\"kf_spinner\"><\/div>");
     document.write("<\/div>");
