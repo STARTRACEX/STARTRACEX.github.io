@@ -191,6 +191,7 @@ footer li a:hover {
 }
 
 #fo-list {
+    min-height: 176px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -221,7 +222,7 @@ footer li a:hover {
     padding-top: 35px;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 720px) {
 
     footer div,
     ul.o {
