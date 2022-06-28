@@ -1,4 +1,5 @@
-body,html {
+body,
+html {
     background-color: rgb(30, 34, 39);
     font-family: 'Noto Sans SC', sans-serif;
     color: rgb(240, 240, 240);
@@ -6,7 +7,7 @@ body,html {
     min-height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-    cursor: url(../img/arrow.cur),auto;
+    cursor: url(../img/arrow.cur), auto;
 }
 
 nav {
@@ -51,11 +52,14 @@ p {
     text-decoration: none;
 }
 
-a,button,#Sumbit {
-    cursor: url(../img/pointer.cur),pointer;
+a,
+button,
+#Sumbit {
+    cursor: url(../img/pointer.cur), pointer;
 }
-input{
-    cursor: url(../img/beam.cur),auto;
+
+input {
+    cursor: url(../img/beam.cur), auto;
 }
 
 .main {
@@ -164,7 +168,8 @@ footer span:not(.colorfulspan) {
     border-bottom: #c7c7c745 1.5px solid;
 }
 
-footer a,footer li {
+footer a,
+footer li {
     margin: 8px 0;
 }
 
@@ -182,7 +187,7 @@ footer li a:hover {
 }
 
 .footertab {
-    width: 10em;
+    width: 11em;
 }
 
 #footer-copyright a {
@@ -230,9 +235,10 @@ footer li a:hover {
         align-items: center;
         text-align: center;
     }
-        .footertab {
-            width: auto;
-        }
+
+    .footertab {
+        width: auto;
+    }
 }
 
 /* 以下主要为表单样式 */
@@ -254,7 +260,7 @@ input#e-mail,
 input#again {
     border-radius: 4.4px;
     height: 1.6em;
-    width: 200px;
+    width: 202px;
     color: #f4f4f4;
     border: 0.8px solid rgb(45, 45, 45);
     background-color: rgba(68, 68, 68, 0.205);
@@ -263,7 +269,11 @@ input#again {
 form input::-webkit-input-placeholder {
     color: rgb(132, 132, 132);
     font-size: 102%;
+
+
 }
+
+
 
 input#username:focus,
 input#password:focus,
@@ -274,7 +284,8 @@ input#again:focus {
 }
 
 form label {
-    margin-right: 4.8px;
+    margin-right: 4.4px;
+
 }
 
 form li {
@@ -282,8 +293,8 @@ form li {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 13.5px;
-    margin-bottom: 8px;
+    margin-top: 16.5px;
+    margin-bottom: 12px;
 }
 
 form {
@@ -328,7 +339,7 @@ form .colorfulspan {
 .loginoption a {
     FONT-WEIGHT: 100;
     display: flex;
-    margin: 12px 16px;
+    margin: 14px 16px;
     align-items: center;
     flex-direction: row;
     justify-content: f;
@@ -342,6 +353,13 @@ form .colorfulspan {
 
 @media screen and (max-width:600px) {
 
+    input#username,
+    input#password,
+    input#e-mail,
+    input#again {
+        width: 226px;
+    }
+
     .loginoption {
         flex-direction: column;
     }
@@ -351,15 +369,13 @@ form .colorfulspan {
         justify-content: flex-start;
     }
 
-    
     form li {
         flex-direction: column;
         align-items: flex-start;
-        /* width: auto; */
     }
 
     form label {
-        margin-bottom: 6px;
+        margin-bottom: 8px;
     }
 
     #Sumbit {
@@ -400,7 +416,7 @@ form .colorfulspan {
     right: 6.4px;
     border-radius: 50%;
     border: 5px solid transparent;
-    border-top-color: #0097c4;
+    border-top-color: #008279;
     -webkit-animation: 3s spin linear infinite;
     animation: 3s spin linear infinite;
 }

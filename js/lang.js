@@ -6,6 +6,7 @@ $(document).ready(function () {
         setCookie("lang", lang, 365);
     }
     DisplayContral(lang);
+    
     $("[i18n]").i18n({
         lang: lang,
         filePath: "./i18n/",
@@ -19,7 +20,6 @@ $(document).ready(function () {
             filePath: "./i18n/"
         });
         lang = "zh";
-        DisplayContral(lang);
         setCookie("lang", lang, 365);
     });
     $("#lang_ru").click(function () {
@@ -28,7 +28,6 @@ $(document).ready(function () {
             filePath: "./i18n/"
         });
         lang = "ru";
-        DisplayContral(lang);
         setCookie("lang", lang, 365);
     });
     $("#lang_en").click(function () {
@@ -38,7 +37,6 @@ $(document).ready(function () {
         });
         lang = "en";
         setCookie("lang", lang, 365);
-        DisplayContral(lang);
     });
     function getCookie(name) {
         var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
@@ -53,18 +51,16 @@ $(document).ready(function () {
         exp.setTime(exp.getTime() + time * 24 * 60 * 60 * 1000);
         document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
     }
-
     function DisplayContral(lang) {
-        if (lang == "ru") {
-            $("#personalOption").css("width", "4.2em");
-            $(".Language_Swich").hide();
-            $(".Show_zh").show();
-        
-        }
         if (lang == "zh") {
             $("#personalOption").css("width", "4em");
             $(".Language_Swich").hide();
             $(".Show_zh").show();
+        }
+        else if (lang == "ru") {
+            $("#personalOption").css("width", "4.2em");
+            $(".Language_Swich").hide();
+            $(".Show_ru").show();
         }
         else{
             $("#personalOption").css("width", "5em");

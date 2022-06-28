@@ -54,9 +54,9 @@ function Nav(name, i) {
             document.write("                        <\/svg>");
             document.write("                    <\/a>");
             document.write("                    <div class=\"option\">");
-            document.write("                        <a id=\"lang_zh\">简体中文<\/a>");
-            document.write("                        <a id=\"lang_en\">English<\/a>");
-            document.write("                        <a id=\"lang_ru\">русский<\/a>");
+            document.write("                        <a href=\"\" id=\"lang_zh\">简体中文<\/a>");
+            document.write("                        <a href=\"\" id=\"lang_en\">English<\/a>");
+            document.write("                        <a href=\"\" id=\"lang_ru\">русский<\/a>");
             document.write("                    <\/div>");
             document.write("                <\/div>");
         }
@@ -66,36 +66,35 @@ function Nav(name, i) {
     document.write("    <\/nav>");
     
 }
-
 //底部和回到顶部，在页面末尾调用
 function Footer() {
     document.write("<footer id=\"footer\">");
     document.write("        <div class=\"footer-about\">");
     document.write("            <ul id=\"fo-list\" class=\"footer-option o\">");
     document.write("                <li class=\"footertab\">");
-    document.write("                    <span i18n=\"about\">关于<\/span>");
+    document.write("                    <span i18n=\"About\">关于<\/span>");
     document.write("                    <ul class=\"i\">");
-    document.write("                        <li><a href=\"#\" target=\"_blank\" i18n=\"about\">关于<\/a><\/li>");
-    document.write("                        <li><a href=\".\/useraggrement.html\" target=\"_blank\" i18n=\"useraggrement\">用户协议<\/a><\/li>");
-    document.write("                        <li><a href=\".\/privacy.html\" target=\"_blank\" i18n=\"privacy\">隐私政策<\/a><\/li>");
-    document.write("                        <li><a href=\".\/PES.html\" target=\"_blank\" i18n=\"photosensitiveepilepsy\">光敏性发作警告<\/a><\/li>");
+    document.write("                        <li><a href=\"\" i18n=\"About\">关于<\/a><\/li>");
+    document.write("                        <li><a href=\".\/useraggrement.html\" target=\"_blank\" i18n=\"Useraggrement\">用户协议<\/a><\/li>");
+    document.write("                        <li><a href=\".\/privacy.html\" target=\"_blank\" i18n=\"Privacy\">隐私政策<\/a><\/li>");
+    document.write("                        <li><a href=\".\/PES.html\" target=\"_blank\" i18n=\"PSE\">光敏性发作警告<\/a><\/li>");
     document.write("                    <\/ul>");
     document.write("                <\/li>");
     document.write("                <li class=\"footertab\">");
-    document.write("                    <span i18n=\"feedback\">反馈<\/span>");
+    document.write("                    <span i18n=\"Feedback\">反馈<\/span>");
     document.write("                    <ul class=\"i\">");
-    document.write("                        <li><a href=\"\" i18n=\"faq\">常见问题<\/a><\/li>");
-    document.write("                        <li><a href=\"\" i18n=\"vulnerabilities\">报告漏洞<\/a><\/li>");
-    document.write("                        <li><a href=\"\" i18n=\"sopport\">客服服务<\/a><\/li>");
+    document.write("                        <li><a href=\"\" i18n=\"FAQ\">常见问题<\/a><\/li>");
+    document.write("                        <li><a href=\"\" i18n=\"ReportBug\">报告漏洞<\/a><\/li>");
+    document.write("                        <li><a href=\"\" i18n=\"Sopport\">客服服务<\/a><\/li>");
     document.write("                    <\/ul>");
     document.write("                <\/li>");
     document.write("                <li class=\"footertab\">");
     document.write("                    <span i18n=\"cooperation\">合作<\/span>");
     document.write("                    <ul class=\"i\">");
-    document.write("                        <li><a href=\"\" i18n=\"pubcoop\">公益合作<\/a><\/li>");
-    document.write("                        <li><a href=\"\" i18n=\"buscoop\">商务合作<\/a><\/li>");
-    document.write("                        <li><a href=\"\" i18n=\"adcoop\">广告投放<\/a><\/li>");
-    document.write("                        <li><a id=\"joinus\" href=\".\/joinus.html\" target=\"_blank\" i18n=\"joinus\">招贤纳士<\/a><\/li>");
+    document.write("                        <li><a href=\"\" i18n=\"PWcoop\">公益合作<\/a><\/li>");
+    document.write("                        <li><a href=\".\/buscoop.html\" i18n=\"Business\">商务合作<\/a><\/li>");
+    document.write("                        <li><a href=\".\/adcoop.html\" i18n=\"ADcoop\">广告投放<\/a><\/li>");
+    document.write("                        <li><a id=\"joinus\" href=\".\/joinus.html\" target=\"_blank\" i18n=\"Joinus\">招贤纳士<\/a><\/li>");
     document.write("                    <\/ul>");
     document.write("                <\/li>");
     document.write("                <li class=\"footertab\">");
@@ -160,7 +159,8 @@ function Footer() {
     document.write("            <a href=\"\">&copy;STARTRACE<\/a>");
     document.write("            <a href=\"https:\/\/github.com\/STARTRACEX\" i18n=\"pagedesine\">页面设计：王世超<\/a>");
     document.write("        <\/div>");
-    document.write("<\/footer>");
+    document.write("    <\/footer>");
+
     // totop level
     document.write("<div id=\"totop\">" +
         "        <a>" +
@@ -171,23 +171,15 @@ function Footer() {
         "                    p-id=\"5016\" fill=\"#f7f7f7\"></path>" +
         "            </svg>" +
         "        </a>" +
-        "    </div>");
+        "    </div>"
+                    );
+    TotopKf();
 }
-//加载动画，在任何地方调用，需要jqury
-function LoadingKf() {
-    document.write("<div id=\"loading\">");
-    document.write("        <div class=\"kf_spinner\"><\/div>");
-    document.write("<\/div>");
-    document.onreadystatechange = function () {
-        $('html').css({ 'overflow-y': 'hidden' });
-        if (document.readyState == "complete") {
-            $("#loading").hide();
-            $('html').css({ 'overflow-y': 'auto' });
-        }
-    }
+//加载动画
+function TotopKf() {
     $("#totop").hide();
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 0.15 * ($(window).height())) {
+        if ($(window).scrollTop() > 0.1 * ($(window).height())) {
             $("#totop").fadeIn()
         } else {
             $("#totop").fadeOut()
@@ -198,4 +190,14 @@ function LoadingKf() {
             'scrollTop': 0
         }, 200)
     });
+}
+document.write("<header id=\"loading\">");
+document.write("        <div class=\"kf_spinner\"><\/div>");
+document.write("<\/header>");
+document.onreadystatechange = function () {
+    $('html').css({ 'overflow-y': 'hidden' });
+    if (document.readyState == "complete") {
+        $("#loading").remove();
+        $('html').css({ 'overflow-y': 'auto' });
+    }
 }
