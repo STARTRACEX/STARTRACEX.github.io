@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTRACE | REPORT</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/Noto+Sans+Sc.css">
+    <script src="./js/index.js"></script>
+    <style>
+        body {
+            min-height: 500px;
+        }
+
+        .Language_Swich {
+            font-size: 160%;
+            padding: 26px;
+        }
+
+        #upfile {
+
+            background-color: azure;
+        }
+
+        #upfile h1 {
+            text-align: center;
+            line-height: 2.2em;
+            color: black;
+        }
+
+        #upfile input {
+            display: none;
+        }
+
+
+        textarea {
+            resize: both;
+            background-color: azure;
+            min-width: 360px;
+            min-height: 200px;
+            max-width: 70vw;
+            max-height: 60vh;
+            padding: 5px;
+            color: #000;
+            font-size: 1.4em;
+            font-weight: 700;
+            overflow: auto;
+            cursor: url(./img/beam.cur),auto;
+        }
+
+        .btn {
+            width: 5.3em;
+            height: 2.2em;
+            font-size: 18px;
+            border-radius: 0.442em;
+            margin: 8px;
+        }
+
+        .btn:hover {
+            background-color: rgba(240, 255, 255);
+            transform: scale(1.02);
+        }
+
+        #filelist {
+            color: #fff;
+            background-color: rgba(130, 130, 130, 0.5);
+            line-height: 1.6em;
+            max-width: 70vw;
+            white-space: wrap;
+            overflow: auto;
+            border-radius: 5px;
+        }
+
+        form li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+        }
+        #callback{
+            cursor: url(./img/pointer.cur),auto;
+        }
+    </style>
+</head>
+
+<body>
+    <Script>
+        Nav("Report", 2);
+    </Script>
+
+    <form id="report" method="post">
+        <ul>
+            <li>
+                <div class="Language_Swich Show_zh">
+                    <h1>请详细描述您的工单</h1>
+                </div>
+                <div class="Language_Swich Show_en Show_ru">
+                    Please describe the report in detail
+                </div>
+            </li>
+            <li> <textarea name="textaera" cols="50" rows="13"></textarea>
+            </li>
+            <li>
+                <div id="upfile" class="btn">
+                    <h1>上传文件</h1>
+                    <input type="file" id="uploadfile" name="report" multiple>
+                </div>
+            </li>
+            <li class="scroll" id="flli" style="display: none;padding-bottom: 6px; margin-bottom: 6px;">
+                <p id="filelist">
+                </p>
+            </li>
+            <li >
+                <input type="checkbox" id="callback" name="callback" value="1"><label for="callback">需要回执</label>
+
+            </li>
+        </ul>
+
+
+        <input type="button" id="Sumbit" value="Sumbit" i18n="sumbit">
+    </form>
+    <script>
+        $("#upfile").click(function () {
+            document.getElementById("uploadfile").click();
+        });
+        var filename = document.getElementById('uploadfile');
+        var filelist = document.getElementById('filelist');
+        filename.addEventListener("change", function () {
+            $("#flli").show();
+            if (filename.files[0] == undefined) {
+                return false;
+            } else {
+                for (let i = 0; i < filename.files.length; i++) {
+                    filelist.innerHTML = filelist.innerHTML + "&nbsp;" + filename.files[i].name
+                        + '&nbsp;<br>';
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

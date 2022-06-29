@@ -82,9 +82,9 @@ function Footer() {
     document.write("                <li class=\"footertab\">");
     document.write("                    <span i18n=\"Feedback\">反馈<\/span>");
     document.write("                    <ul class=\"i\">");
-    document.write("                        <li><a href=\"\" i18n=\"FAQ\">常见问题<\/a><\/li>");
-    document.write("                        <li><a href=\"\" i18n=\"ReportBug\">报告漏洞<\/a><\/li>");
-    document.write("                        <li><a href=\"\" i18n=\"Sopport\">客服服务<\/a><\/li>");
+    document.write("                        <li><a href=\".\/faq.html\" i18n=\"FAQ\">常见问题<\/a><\/li>");
+    document.write("                        <li><a href=\".\/report.html\" i18n=\"ReportBug\">报告漏洞<\/a><\/li>");
+    document.write("                        <li><a href=\".\/report.html\" i18n=\"Sopport\">客服服务<\/a><\/li>");
     document.write("                    <\/ul>");
     document.write("                <\/li>");
     document.write("                <li class=\"footertab\">");

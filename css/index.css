@@ -9,7 +9,9 @@ html {
     overflow-x: hidden;
     cursor: url(../img/arrow.cur), auto;
 }
-
+label{
+    cursor: url(../img/arrow.cur), auto;
+}
 nav {
     background-color: rgb(30, 29, 29);
     width: 100%;
@@ -54,6 +56,8 @@ p {
 
 a,
 button,
+input[type="button"],
+.btn,
 #Sumbit {
     cursor: url(../img/pointer.cur), pointer;
 }
@@ -68,17 +72,19 @@ input {
     margin: 0 auto 0;
 
 }
-
+.text-center{
+    text-align: center;
+}
+.nowrap{
+    white-space:nowrap;
+}
 main {
-    height: calc(100vh - 48.25px);
+    height: calc(100vh - 46px);
     position: relative;
     overflow: hidden;
 }
-
-
 /* 以上为全局样式 */
 /* 以下顶端导航样式 */
-
 nav .right {
     display: flex;
     flex-direction: row;
@@ -247,13 +253,13 @@ div.platform {
     width: clamp(300px, 80vw, 640px);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0;
-    margin-top: clamp(38px, 12%, 128px);
     background-color: rgb(30, 35, 43);
     border-radius: 18px;
-    box-shadow: #f4f4f40f 0px 0px 20px;
+    box-shadow: #f4f4f40f 0px 0px 9px;
 }
-
+.top_adaptive{
+    margin-top: clamp(38px, 8%, 128px);
+}
 /* 表单输入框 */
 input#username,
 input#password,
@@ -284,12 +290,15 @@ input#again:focus {
     outline: 1.2px solid #07c8ea90;
 }
 
-form label {
+form#register_form label,
+form#login_form label {
     margin-right: 4.4px;
 
 }
 
-form li {
+
+form#register_form li,
+form#login_form li {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -370,17 +379,19 @@ form .colorfulspan {
         justify-content: flex-start;
     }
 
-    form li {
+    form#register_form li,
+    form#login_form li {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    form label {
+    form#register_form label,
+    form#login_form label {
         margin-bottom: 8px;
     }
 
     #Sumbit {
-        width: 10.8rem;
+        width: 7.5rem;
     }
 }
 
@@ -444,4 +455,21 @@ form .colorfulspan {
     to {
         transform: rotate(360deg);
     }
+}
+
+.scroll ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e8e8e8;
+}
+
+.scroll ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #cecece;
+}
+
+.scroll ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgb(155, 155, 155);
 }
