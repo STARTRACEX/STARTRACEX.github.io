@@ -21,6 +21,8 @@ $(document).ready(function () {
         });
         lang = "zh";
         setCookie("lang", lang, 365);
+        DisplayContral(lang);
+
     });
     $("#lang_ru").click(function () {
         $("[i18n]").i18n({
@@ -29,6 +31,8 @@ $(document).ready(function () {
         });
         lang = "ru";
         setCookie("lang", lang, 365);
+        DisplayContral(lang);
+
     });
     $("#lang_en").click(function () {
         $("[i18n]").i18n({
@@ -37,6 +41,8 @@ $(document).ready(function () {
         });
         lang = "en";
         setCookie("lang", lang, 365);
+        DisplayContral(lang);
+
     });
     function getCookie(name) {
         var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
